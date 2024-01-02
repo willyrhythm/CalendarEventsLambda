@@ -71,10 +71,10 @@ jobs:
         zip -r function.zip .
         aws lambda update-function-code --function-name SearchCalendarEventsFunction --zip-file fileb://function.zip
 
-    - name: Deploy UpdateCalendarEventsFunction
+    - name: Deploy UpdateCalendarEventFunction
       run: |
-        cd UpdateCalendarEventsFunction
+        cd UpdateCalendarEventFunction
         npm install
         zip -r function.zip .
-        aws lambda update-function-code --function-name UpdateCalendarEventsFunction --zip-file fileb://function.zip
+        aws lambda update-function-code --function-name UpdateCalendarEventFunction --zip-file fileb://function.zip
         
