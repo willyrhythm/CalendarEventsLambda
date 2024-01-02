@@ -36,3 +36,45 @@ jobs:
         zip -r function.zip .
         aws lambda update-function-code --function-name CreateCalendarEventFunction --zip-file fileb://function.zip
 
+    - name: Deploy DeleteCalendarEventFunction
+      run: |
+        cd DeleteCalendarEventFunction
+        npm install
+        zip -r function.zip .
+        aws lambda update-function-code --function-name DeleteCalendarEventFunction --zip-file fileb://function.zip
+
+    - name: Deploy GetCalendarEventFunction
+      run: |
+        cd GetCalendarEventFunction
+        npm install
+        zip -r function.zip .
+        aws lambda update-function-code --function-name GetCalendarEventFunction --zip-file fileb://function.zip
+
+    - name: Deploy GetUpcomingEventsFunction
+      run: |
+        cd GetUpcomingEventsFunction
+        npm install
+        zip -r function.zip .
+        aws lambda update-function-code --function-name GetUpcomingEventsFunction --zip-file fileb://function.zip
+
+    - name: Deploy ListCalendarEventsFunction
+      run: |
+        cd ListCalendarEventsFunction
+        npm install
+        zip -r function.zip .
+        aws lambda update-function-code --function-name ListCalendarEventsFunction --zip-file fileb://function.zip
+
+    - name: Deploy SearchCalendarEventsFunction
+      run: |
+        cd SearchCalendarEventsFunction
+        npm install
+        zip -r function.zip .
+        aws lambda update-function-code --function-name SearchCalendarEventsFunction --zip-file fileb://function.zip
+
+    - name: Deploy UpdateCalendarEventsFunction
+      run: |
+        cd UpdateCalendarEventsFunction
+        npm install
+        zip -r function.zip .
+        aws lambda update-function-code --function-name UpdateCalendarEventsFunction --zip-file fileb://function.zip
+        
